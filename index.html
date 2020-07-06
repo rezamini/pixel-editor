@@ -1,0 +1,39 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="./index.css" media="screen"/>
+  <script src="./index.js"></script>
+</head>
+<body>
+  <nav class="fixed-nav-bar">
+    <span class="navbar-title left">pixel editor</span>
+  </nav>
+
+  <div id="container">
+
+   <div class="row">
+    <div class="column left center">
+      <input type="text" id="pick" class="center" value="" readonly="true"/>
+    </div>
+    <div class="column right">
+      <input type="text" id="tableRow" value="16"/>
+      <span> X </span>
+      <input type="text" id="tableColumn" value="16"/>
+    </div>
+   </div>
+
+   <div class="row">
+    <div class="column center">
+      <div>
+        <input class="rainbow" id="rainbowBar" type="range" orient="vertical" min="0" max="360" />
+      </div>
+    </div>
+    <div class="column right">
+      <div id='table-holder' class="center">
+          <table id="colorTable" class="center"></table>
+      </div>
+    </div>
+   </div>
+
+  </div>
+</body>
+</html>
