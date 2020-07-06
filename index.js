@@ -11,13 +11,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
 
     var tableRow = document.getElementById("tableRow");
+	var tableColumn = document.getElementById("tableColumn");
+	
     if(tableRow){
       tableRow.addEventListener('input', (event) => {
         tableCreate(event.target.value, tableColumn.value);
       });
     }
 
-    var tableColumn = document.getElementById("tableColumn");
+    
     if(tableColumn){
       tableColumn.addEventListener('input', (event) => {
         tableCreate(tableRow.value, event.target.value);
@@ -42,8 +44,8 @@ function tableCreate(row, column) {
   var row_num = eval(row);
   var col_num = eval(column);
 
-  var tds = '<td>\n'.repeat(row_num);
-  var trs = ('<tr>\n'+tds).repeat(col_num);
+  var tds = '<td>\n'.repeat(col_num);
+  var trs = ('<tr>\n'+tds).repeat(row_num);
 
   document.getElementById('colorTable').innerHTML = trs;
 }
